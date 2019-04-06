@@ -1,3 +1,84 @@
 .App {
+  width: 900px;
   text-align: center;
+  font-size: 1.6rem;
+  margin: 0 auto;
+  background: url('img/smurfvillage.jpg');
+  
+}
+
+.main {
+   background: rgba(255, 255, 255, 0.6);
+}
+header {
+  width: 100%;
+  height: 50px;
+  margin: 20px auto;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  border-bottom: 1px solid #222;
+}
+header a {
+  font-size: 1.8rem;
+  text-decoration: none;
+  color: black;
+}
+
+.active {
+  font-weight: bold;
+}
+
+.Smurf {
+  position: relative;
+  width: 50%;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+.Smurf span {
+  margin-left: 10px;
+}
+
+.Smurfs ul {
+  padding: 10px;
+}
+
+.SmurfForm {
+  margin-top: 20px;
+}
+
+.btn {
+  font-size: 1.8rem;
+  top: 50%;
+  cursor: pointer;
+}
+.delete {
+  right: 25%;
+}
+.edit {
+  left: 25%;
+}
+.btn:active {
+  transform: translateY(calc(-50% + 2px));
+}
+.update-form {
+  width: 50%;
+  margin: 0 auto;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 15px;
+}
+.return {
+  position: absolute;
+  top: 50%;
+  left: 30%;
+  transform: translateY(-50%);
+  font-size: 1.8rem;
+  cursor: pointer;
+}
+.return:active {
+  transform: translateY(calc(-50% + 2px));
 }
