@@ -3,11 +3,7 @@ import axios from 'axios';
 import Smurf from './Smurf';
 
 class Smurfs extends Component {
- deleteSmurf= id => {
-   axios.delete(`http://localhost:3333/smurfs/${id}`)
-   .then(response => this.props.fetchSmurfs())
-   .catch(err => console.log(err))
- }
+
 
   render() {
     return (
@@ -22,7 +18,8 @@ class Smurfs extends Component {
                 age={smurf.age}
                 height={smurf.height}
                 key={smurf.id}
-                deleteSmurf={this.deleteSmurf}
+                deleteSmurf={this.props.deleteSmurf}
+                updateSmurf={this.props.updateSmurf}
               />
             );
           })}
