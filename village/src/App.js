@@ -14,6 +14,10 @@ class App extends Component {
   }
 
   componentDidMount() {
+    this.fetchSmurfs();
+  }
+
+  fetchSmurfs = () => {
     axios
     .get("http://localhost:3333/smurfs")
     .then(response => {
@@ -28,7 +32,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <SmurfForm />
+        <SmurfForm fetchSmurfs={this.fetchSmurfs} />
         <Smurfs smurfs={this.state.smurfs} />
       </div>
     );
